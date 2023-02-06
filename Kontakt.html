@@ -1,0 +1,73 @@
+<!DOCTYPE html> 
+<html lang="pl"> 
+
+<head>
+<title> Wiedźmin gra komputerowa </title>
+<meta charset="utf-8"> 
+
+<meta name="author" content=""> 
+<link rel="stylesheet" type="text/css" href="styl.css">
+</head>
+
+<script>
+    document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    document.getElementById('email').value = '';
+    document.getElementById('name').value = '';
+    });
+    function validateForm() {
+    var x = document.getElementById("email").value;
+    var y = document.getElementById("name").value;
+    if (x == "" || y == "") {
+    alert("Proszę o wypełnienie obu pól!");
+    return false;
+    } else {
+    alert("Dziękujemy! Witaj na szlaku wiedźminie! 😉");
+    return true;
+    }
+    }
+    </script>
+
+<body>
+<div  id="index">
+
+<div >
+    <header>
+        <nav>
+          <ul>
+            <li><a href="Oswiecie.html"><img src="logo.png" alt="logo" class="logo"></a>
+            <li><a href="Oswiecie.html">O świecie</a></li>
+            <li><a href="Bohaterowie.html">Bohaterowie</a></li>
+            <li><a href="Lokalizacje.html">Lokalizacje</a></li>
+            <li><a href="Galeria.html">Galeria</a></li>
+            <li><a href="Kontakt.html">Kontakt</a></li>
+            
+            <a href="OswiecieENG.html" style="float:right"><div class="languages-item">ENG</a>
+            <a href="Oswiecie.html" style="float:right"><div class="languages-item">PL</a>
+        
+          </ul>
+        </nav>
+      </header>
+ 
+      <form action="#">
+        <label> Jeśli chcesz otrzymywać więcej informacji o świecie Wiedźmina, zapisz się do Newslettera!</label><br>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email">
+        <label for="name">Imię i nazwisko:</label>
+        <input type="name" id="name" name="name"><br>
+        <input type="submit" value="Wyślij" onclick="return validateForm()">
+        </form>
+    
+<div id="inf" style="margin-top: 40px;">
+        Za stworzenie strony opowiada:</div></div>
+        Krzysztof Chełstowski</br>
+        Nr tel. 000-000-000</br>
+        E-mail: s96905@pollub.edu.pl</br>
+</div>
+
+<div>
+<footer class="footer">&copy;2023 Krzysztof Chełstowski</footer>
+</div>
+  
+  </body>
+  </html>
